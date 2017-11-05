@@ -8,7 +8,7 @@ Research paper is under `/docs/InvestigatingChaoticPSOForNeuralNetworkTraining`
 
 #### Getting Started:
 
-#####Install depenencies:
+##### Install depenencies:
 `sudo -H pip install -r requirments.txt`
 
 ##### Running a simulation:
