@@ -5,7 +5,7 @@ from src.numberGenerator.chaos.cprng import CPRNG
 
 from mlpy.psoNeuralNetwork.vonNeumannPSONN import VNPSONN
 
-class VNPSONN(VNPSONN):
+class VNCPSONN(VNPSONN):
     def __init__(self):
         super(VNPSONN, self).__init__()
 

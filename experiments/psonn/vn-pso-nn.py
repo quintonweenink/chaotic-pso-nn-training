@@ -4,6 +4,7 @@ import numpy as np
 from mlpy.dataSet.dataSetTool import DataSetTool
 from mlpy.numberGenerator.bounds import Bounds
 from mlpy.psoNeuralNetwork.vonNeumannPSONN import VNPSONN
+from src.vonNeumannCPSONN import VNCPSONN
 
 dataSetTool = DataSetTool()
 
@@ -34,27 +35,27 @@ INITIAL_POSITION = Bounds(-5, 5)
 
 DESC = 'Glass'
 DATA_SET_FUNC = dataSetTool.getGlassDataSets
-DATA_SET_FILE_LOC = '../dataSets/glass/glass.data'
+DATA_SET_FILE_LOC = 'experiments/dataSets/glass/glass.data'
 HIDDEN_LAYER_NEURONS = [12]
 
 # DESC = 'Iris'
 # DATA_SET_FUNC = dataSetTool.getIrisDataSets
-# DATA_SET_FILE_LOC = '../dataSets/iris/iris.data'
+# DATA_SET_FILE_LOC = 'experiments/dataSets/iris/iris.data'
 # HIDDEN_LAYER_NEURONS = [8]
 
 # DESC = 'Wine'
 # DATA_SET_FUNC = dataSetTool.getWineDataSets
-# DATA_SET_FILE_LOC = '../dataSets/wine/wine.data'
+# DATA_SET_FILE_LOC = 'experiments/dataSets/wine/wine.data'
 # HIDDEN_LAYER_NEURONS = [10]
 
 # DESC = 'Diabetes'
 # DATA_SET_FUNC = dataSetTool.getPrimaIndiansDiabetesSets
-# DATA_SET_FILE_LOC = '../dataSets/pima-indians-diabetes/pima-indians-diabetes.data'
+# DATA_SET_FILE_LOC = 'experiments/dataSets/pima-indians-diabetes/pima-indians-diabetes.data'
 # HIDDEN_LAYER_NEURONS = [20]
 
 # DESC = 'Heart'
 # DATA_SET_FUNC = dataSetTool.getHeartDataSets
-# DATA_SET_FILE_LOC = '../dataSets/heart/processed.cleveland.data'
+# DATA_SET_FILE_LOC = 'experiments/dataSets/heart/processed.cleveland.data'
 # HIDDEN_LAYER_NEURONS = [10]
 
 
@@ -69,7 +70,7 @@ print('Vmax: ', V_MAX)
 print('Data Set: ', DESC)
 print('Tinkerbell:')
 for i in range(samples):
-    psonn = VNPSONN()
+    psonn = VNCPSONN()
     psonn.training, psonn.testing, psonn.generalization = dataSetArray[i]
     psonn.bounds = BOUNDS
     psonn.initialPosition = INITIAL_POSITION
@@ -93,7 +94,7 @@ for i in range(samples):
 
 print('Lozi:')
 for i in range(samples):
-    psonn = VNPSONN()
+    psonn = VNCPSONN()
     psonn.training, psonn.testing, psonn.generalization = dataSetArray[i]
     psonn.bounds = BOUNDS
     psonn.initialPosition = INITIAL_POSITION
@@ -117,7 +118,7 @@ for i in range(samples):
 
 print('Dissipative:')
 for i in range(samples):
-    psonn = VNPSONN()
+    psonn = VNCPSONN()
     psonn.training, psonn.testing, psonn.generalization = dataSetArray[i]
     psonn.bounds = BOUNDS
     psonn.initialPosition = INITIAL_POSITION
