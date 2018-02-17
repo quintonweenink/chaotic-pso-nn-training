@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 
-from mlpy.numberGenerator.chaos.dissipative import Dissipative
-from mlpy.numberGenerator.chaos.lozi import Lozi
-from mlpy.numberGenerator.chaos.tinkerbell import Tinkerbell
+from src.numberGenerator.chaos.dissipative import Dissipative
+from src.numberGenerator.chaos.lozi import Lozi
+from src.numberGenerator.chaos.tinkerbell import Tinkerbell
 
 cprng = Tinkerbell()
 

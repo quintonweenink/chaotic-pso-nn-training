@@ -4,6 +4,7 @@ import numpy as np
 from mlpy.dataSet.dataSetTool import DataSetTool
 from mlpy.numberGenerator.bounds import Bounds
 from mlpy.psoNeuralNetwork.psonn import PSONN
+from mlpy.psoNeuralNetwork.cpsonn import CPSONN
 
 dataSetTool = DataSetTool()
 
@@ -68,7 +69,7 @@ print('Vmax: ', V_MAX)
 print('Data Set: ', DESC)
 print('Tinkerbell:')
 for i in range(samples):
-    psonn = PSONN()
+    psonn = CPSONN()
     psonn.training, psonn.testing, psonn.generalization = dataSetArray[i]
     psonn.bounds = BOUNDS
     psonn.initialPosition = INITIAL_POSITION
@@ -91,7 +92,7 @@ for i in range(samples):
 
 print('Lozi:')
 for i in range(samples):
-    psonn = PSONN()
+    psonn = CPSONN()
     psonn.training, psonn.testing, psonn.generalization = dataSetArray[i]
     psonn.bounds = BOUNDS
     psonn.initialPosition = INITIAL_POSITION
@@ -114,7 +115,7 @@ for i in range(samples):
 
 print('Dissipative:')
 for i in range(samples):
-    psonn = PSONN()
+    psonn = CPSONN()
     psonn.training, psonn.testing, psonn.generalization = dataSetArray[i]
     psonn.bounds = BOUNDS
     psonn.initialPosition = INITIAL_POSITION
