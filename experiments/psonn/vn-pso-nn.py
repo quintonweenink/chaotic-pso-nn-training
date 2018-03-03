@@ -35,7 +35,7 @@ INITIAL_POSITION = Bounds(-5, 5)
 
 DESC = 'Glass'
 DATA_SET_FUNC = dataSetTool.getGlassDataSets
-DATA_SET_FILE_LOC = 'experiments/dataSets/glass/glass.data'
+DATA_SET_FILE_LOC = '../problems/dataSets/glass/glass.data'
 HIDDEN_LAYER_NEURONS = [12]
 
 # DESC = 'Iris'
@@ -82,7 +82,7 @@ for i in range(samples):
     psonn.socialConstant = SOCIAL_CONSTANT
     psonn.vmax = V_MAX
 
-    from mlpy.numberGenerator.chaos.tinkerbell import Tinkerbell
+    from src.numberGenerator.chaos.tinkerbell import Tinkerbell
     psonn.numberGenerator = Tinkerbell()
 
     psonn.color = 'red'
@@ -106,7 +106,7 @@ for i in range(samples):
     psonn.socialConstant = SOCIAL_CONSTANT
     psonn.vmax = V_MAX
 
-    from mlpy.numberGenerator.chaos.lozi import Lozi
+    from src.numberGenerator.chaos.lozi import Lozi
     psonn.numberGenerator = Lozi()
 
     psonn.color = 'green'
@@ -130,7 +130,7 @@ for i in range(samples):
     psonn.socialConstant = SOCIAL_CONSTANT
     psonn.vmax = V_MAX
 
-    from mlpy.numberGenerator.chaos.dissipative import Dissipative
+    from src.numberGenerator.chaos.dissipative import Dissipative
     psonn.numberGenerator = Dissipative()
 
     psonn.color = 'blue'

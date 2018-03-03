@@ -14,9 +14,9 @@ class CPSONN(PSONN):
     def createParticles(self):
         assert isinstance(self.numberGenerator, CPRNG) == True
 
-        for i in range(self.pso.num_particles):
-            self.pso.swarm.append(ChaoticParticle(self.bounds, self.numberGenerator, self.inertia_weight, self.cognitiveConstant, self.socialConstant))
+        for i in range(self.num_particles):
+            self.swarm.append(ChaoticParticle(self.bounds, self.numberGenerator, self.weight, self.cognitiveConstant, self.socialConstant))
             position = (self.initialPosition.maxBound - self.initialPosition.minBound) * np.random.random(self.num_dimensions) + self.initialPosition.minBound
             velocity = np.zeros(self.num_dimensions)
-            self.pso.swarm[i].initPos(position, velocity)
+            self.swarm[i].initPos(position, velocity)
 

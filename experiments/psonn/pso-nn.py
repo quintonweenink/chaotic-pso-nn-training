@@ -23,7 +23,7 @@ pso_error = []
 pso_generalization_error = []
 
 iterations = 5000
-samples = 30
+samples = 2
 
 NUM_PARTICLES = 25
 INERTIA_WEIGHT = 0.729844
@@ -34,7 +34,7 @@ INITIAL_POSITION = Bounds(-5, 5)
 
 DESC = 'Glass'
 DATA_SET_FUNC = dataSetTool.getGlassDataSets
-DATA_SET_FILE_LOC = 'experiments/dataSets/glass/glass.data'
+DATA_SET_FILE_LOC = '../../experiments/problems/dataSets/glass/glass.data'
 HIDDEN_LAYER_NEURONS = [12]
 
 # DESC = 'Iris'
@@ -75,12 +75,12 @@ for i in range(samples):
     psonn.initialPosition = INITIAL_POSITION
     psonn.createNeuralNetwork(HIDDEN_LAYER_NEURONS)
     psonn.num_particles = NUM_PARTICLES
-    psonn.inertia_weight = INERTIA_WEIGHT
+    psonn.weight = INERTIA_WEIGHT
     psonn.cognitiveConstant = COGNITIVE_CONSTANT
     psonn.socialConstant = SOCIAL_CONSTANT
     psonn.vmax = V_MAX
 
-    from mlpy.numberGenerator.chaos.tinkerbell import Tinkerbell
+    from src.numberGenerator.chaos.tinkerbell import Tinkerbell
     psonn.numberGenerator = Tinkerbell()
 
     psonn.color = 'red'
@@ -98,12 +98,12 @@ for i in range(samples):
     psonn.initialPosition = INITIAL_POSITION
     psonn.createNeuralNetwork(HIDDEN_LAYER_NEURONS)
     psonn.num_particles = NUM_PARTICLES
-    psonn.inertia_weight = INERTIA_WEIGHT
+    psonn.weight = INERTIA_WEIGHT
     psonn.cognitiveConstant = COGNITIVE_CONSTANT
     psonn.socialConstant = SOCIAL_CONSTANT
     psonn.vmax = V_MAX
 
-    from mlpy.numberGenerator.chaos.lozi import Lozi
+    from src.numberGenerator.chaos.lozi import Lozi
     psonn.numberGenerator = Lozi()
 
     psonn.color = 'green'
@@ -121,12 +121,12 @@ for i in range(samples):
     psonn.initialPosition = INITIAL_POSITION
     psonn.createNeuralNetwork(HIDDEN_LAYER_NEURONS)
     psonn.num_particles = NUM_PARTICLES
-    psonn.inertia_weight = INERTIA_WEIGHT
+    psonn.weight = INERTIA_WEIGHT
     psonn.cognitiveConstant = COGNITIVE_CONSTANT
     psonn.socialConstant = SOCIAL_CONSTANT
     psonn.vmax = V_MAX
 
-    from mlpy.numberGenerator.chaos.dissipative import Dissipative
+    from src.numberGenerator.chaos.dissipative import Dissipative
     psonn.numberGenerator = Dissipative()
 
     psonn.color = 'blue'
@@ -144,7 +144,7 @@ for i in range(samples):
     psonn.initialPosition = INITIAL_POSITION
     psonn.createNeuralNetwork(HIDDEN_LAYER_NEURONS)
     psonn.num_particles = NUM_PARTICLES
-    psonn.inertia_weight = INERTIA_WEIGHT
+    psonn.weight = INERTIA_WEIGHT
     psonn.cognitiveConstant = COGNITIVE_CONSTANT
     psonn.socialConstant = SOCIAL_CONSTANT
     psonn.vmax = V_MAX

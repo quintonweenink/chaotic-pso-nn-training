@@ -18,7 +18,7 @@ cognitiveConstant = 1.49
 socialConstant = 1.49
 num_dimensions = 50
 # Configure PSO
-pso = PSO(bounds, num_particles, inertia_weight, cognitiveConstant, socialConstant)
+pso = PSO()
 
 def error(position):
     err = 0.0
