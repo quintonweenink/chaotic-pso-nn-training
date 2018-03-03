@@ -1,7 +1,7 @@
 from src.numberGenerator.chaos.cprng import CPRNG
-from mlpy.particleSwarmOptimization.structure.particle import Particle
+from mlpy.psoNeuralNetwork.particlenn import ParticleNN
 
-class ChaoticParticle(Particle):
+class ChaoticParticle(ParticleNN):
 
     def __init__(self, bounds, numberGenerator, weight, cognitiveConstant, socialConstant):
         super(ChaoticParticle, self).__init__(bounds, weight, cognitiveConstant, socialConstant)

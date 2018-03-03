@@ -8,8 +8,8 @@ pso_errors = []
 pso_error = []
 pso_training_error = []
 
-iterations = 2000
-samples = 2
+ITERATIONS = 2000
+SAMPLES = 2
 
 NUM_PARTICLES = 30
 NUM_DIMENSIONS = 30
@@ -34,7 +34,7 @@ problem_list = [
 
 for problem in problem_list:
     print("Problem: " + problem.getDescription())
-    for i in range(samples):
+    for i in range(SAMPLES):
         print("Iteration: " + str(i))
         pso = PSO()
         pso.bounds = problem.getBounds()
@@ -49,7 +49,7 @@ for problem in problem_list:
         pso.error = problem.function
 
         pso.color = 'black'
-        trainingErrors, trainingError = pso.train(iterations)
+        trainingErrors, trainingError = pso.train(ITERATIONS)
 
         pso_errors.append(trainingErrors)
         pso_error.append(trainingError)
@@ -83,7 +83,7 @@ plt.close()
 
 fig = plt.figure()
 plt.grid(1)
-plt.xlim([0, 5000])
+plt.xlim([0, ITERATIONS])
 plt.ion()
 plt.xlabel('Iterations')
 plt.ylabel('Mean Squared Error')
