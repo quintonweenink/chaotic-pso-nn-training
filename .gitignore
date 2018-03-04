@@ -102,3 +102,4 @@ ENV/
 .idea
 .vscode
 *.png
+!docs/**/*.png
