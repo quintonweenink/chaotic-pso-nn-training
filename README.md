@@ -8,8 +8,8 @@ Research paper is under `/docs/InvestigatingChaoticPSOForNeuralNetworkTraining`
 
 #### Getting Started:
 
-##### Install depenencies:
-`sudo -H pip install -r requirments.txt`
+##### Install dependencies:
+`sudo -H pip install -r requirements.txt`
 
 ##### Running a simulation:
 
