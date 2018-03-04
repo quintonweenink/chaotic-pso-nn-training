@@ -1,7 +1,7 @@
 import numpy as np
 
 from mlpy.numberGenerator.bounds import Bounds
-from experiments.problems.functions.function import Function
+from experiments.problems.functions.structure.function import Function
 
 class AbsoluteValue(Function):
 
@@ -9,7 +9,7 @@ class AbsoluteValue(Function):
         return np.sum(np.abs(position))
 
     def getBounds(self):
-        return Bounds(100, 100)
+        return Bounds(-100, 100)
 
     def test(self):
         assert(3 == self.function(np.array([1, 2])))

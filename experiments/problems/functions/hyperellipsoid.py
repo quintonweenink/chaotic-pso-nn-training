@@ -1,7 +1,7 @@
 import numpy as np
 
 from mlpy.numberGenerator.bounds import Bounds
-from experiments.problems.functions.function import Function
+from experiments.problems.functions.structure.function import Function
 
 class Hyperellipsoid(Function):
 
