@@ -1,7 +1,7 @@
 import math
 
 from mlpy.numberGenerator.bounds import Bounds
-from experiments.problems.functions.function import Function
+from experiments.problems.functions.structure.function import Function
 
 class SomeRandomMath(Function):
 
@@ -13,4 +13,4 @@ class SomeRandomMath(Function):
         return err
 
     def getBounds(self):
-        return Bounds(10, 10)
+        return Bounds(-10, 10)
